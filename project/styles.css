@@ -1,0 +1,136 @@
+/* Universal settings */
+body {
+    font-family: 'Cascadia Code', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+:root {
+    --bg-color: #F0F0F0;
+    --text-color: #1C1C1C;
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --comparison-color: #FF5733;
+    --swap-color: #28A745;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1C1C1C;
+        --text-color: #FFFFFF;
+    }
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+textarea, select, button {
+    font-family: inherit;
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    resize: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Control panel styling */
+.control-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#speedSlider {
+    width: 150px;
+    cursor: pointer;
+}
+
+#speedLabel {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Visualization container */
+.visualization-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start; /* Align bars to the left */
+    align-items: flex-end;
+    height: 300px;
+    background-color: #000;
+    overflow-x: auto;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    width: 45px;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s, height 0.3s;
+}
+
+.block.comparison {
+    background-color: var(--comparison-color) !important;
+}
+
+.block.swap {
+    background-color: var(--swap-color) !important;
+}

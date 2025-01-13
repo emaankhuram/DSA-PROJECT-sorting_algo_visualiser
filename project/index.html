@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Sorting Visualizer</div>
+        <textarea id="inputArray" placeholder="Enter numbers separated by space"></textarea>
+        <div class="control-panel">
+            <button id="runButton">Run Sorting</button>
+            <select id="sortingAlgorithm">
+                <option>Bubble Sort</option>
+                <option>Selection Sort</option>
+                <option>Insertion Sort</option>
+                <option>Merge Sort</option>
+                <option>Quick Sort</option>
+                <option>Heap Sort</option>
+                <option>Counting Sort</option>
+                <option>Radix Sort</option>
+            </select>
+            <div class="slider-wrapper">
+                <input type="range" id="speedSlider" min="50" max="1000" value="300" step="50">
+                <span id="speedLabel">300ms</span>
+            </div>
+        </div>
+        <div id="outputResult"></div>
+        <div class="visualization-container" id="visualizationContainer"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
